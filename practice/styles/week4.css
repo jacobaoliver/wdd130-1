@@ -1,0 +1,46 @@
+body{
+    font-size: 2em;
+}
+
+nav{
+    text-align: center;
+    background-color: lightblue;
+}
+main{
+    background-color: lightblue;
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img{
+    width: 50%;
+}
+
+body{
+    font-size: 1.5em;
+}
+
+#green{
+    background-color: lightgreen;
+}
+
+p{
+    color: darkgreen;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer p{
+    color: black;
+}
+
+a:hover{
+    background-color: chartreuse;
+    color: lavender;
+}
+
+nav a{
+    margin: 20px;
+}
