@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px black solid
+}
+
+.blog-post{
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.blog-stats{
+    color:white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    text-align: center;
+    background-color: gray;
+}
+
+#read{
+    background-color: rgb(63, 91, 139);
+}
+
+#views{
+    background-color: rgb(63, 91, 139);
+}
+
+#comments{
+    background-color: rgb(63, 91, 139);
+}
