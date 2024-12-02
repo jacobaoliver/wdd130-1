@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 Component Activity</title>
+    <link rel="stylesheet" href="styles/week12.css">
+</head>
+
+<body>
+    <h1>The Awesome Seattle Mariners!</h1>
+    <button class="accordion">Team History</button>
+    <div class="panel">
+        <p>The Seattle Mariners, established in 1977, are a Major League Baseball (MLB) team based in Seattle,
+            Washington. They are part of the American League (AL) West Division and play their home games at T-Mobile
+            Park. Despite being one of the newer franchises in MLB, the Mariners have built a rich history of memorable
+            players and moments. The team’s first playoff appearance came in 1995, a season that remains iconic in
+            Mariners lore due to Edgar Martinez’s legendary "Double" that secured a dramatic postseason victory.</p>
+    </div>
+
+    <button class="accordion">Notable Players and Achievements</button>
+    <div class="panel">
+        <p>Over the years, the Mariners have been home to several baseball legends. Ken Griffey Jr., one of the most
+            celebrated players in MLB history, dazzled fans with his power and grace in center field. Ichiro Suzuki
+            brought a unique blend of hitting and fielding that earned him numerous accolades, including the AL MVP and
+            Rookie of the Year in 2001. The team also holds the MLB record for most wins in a single season, with an
+            astonishing 116 victories in 2001, a season that showcased their dominance.</p>
+    </div>
+
+    <button class="accordion">Current Team and Future Outlook</button>
+    <div class="panel">
+        <p>The Mariners are currently in a phase of building towards consistent playoff contention. With a mix of young
+            stars and veteran leadership, the team is focused on breaking their playoff drought and aiming for their
+            first World Series appearance. Key players like Julio Rodríguez and a strong pitching rotation give fans
+            plenty of reasons to be optimistic. Mariners fans remain some of the most passionate in baseball, rallying
+            behind their team year after year with unwavering loyalty.</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
