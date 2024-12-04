@@ -1,0 +1,199 @@
+/*  
+ --primary-color: #0147bb;
+ --secondary-color: #4169E1;
+ --accent1-color: #000000;
+ --accent2-color: white;
+ */
+
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Satisfy&display=swap");
+
+body {
+  max-width: fit-content;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Open Sans", sans-serif;
+  color: black;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px 1fr 10px;
+  grid-template-rows: 80px auto auto auto 70px; 
+  grid-template-areas:
+    "nav nav nav"
+    ". image ."
+    "content content content"
+    "content content content"
+    "footer footer footer";
+  gap: 20px; 
+}
+
+/* Navigation */
+nav {
+  grid-area: nav;
+  background-color: #0147bb; /* Primary color */
+  padding: 10px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  grid-column: 1/6;
+  font-family: Kanit, "Open Sans", sans-serif;
+  border-bottom: black 5px solid;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 100px; 
+  justify-content: center; 
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #4169e1; /* Lighter blue */
+}
+
+#jacob {
+  grid-column: 1/1;
+  grid-row: 2/2;
+  color: black;
+  font-family: Satisfy;
+  margin: 0 auto;
+  margin-top: 170px;
+  background-color: white;
+  /* border: 8px #0147bb solid; */
+  padding: 4px;
+}
+
+#gallery {
+    grid-column: 3/4;
+    grid-row: 3/3;
+    color: black;
+    font-family: Satisfy;
+    font-size: 1.5em;
+    background-color: white;
+    /* border: 8px #0147bb solid; */
+    padding: 4px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-right: 10px;
+    max-height: 35px;
+    border: 8px #4169e1 solid;
+  }
+
+
+/* Images */
+
+#home-logo {
+  grid-area: content;
+  grid-column: 1/1;
+  grid-row: 2/2;
+  max-width: 100%;
+  border-radius: 10px; 
+  justify-self: center; 
+  /* border: 8px #0147bb solid; */
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+#team-pic {
+  grid-area: content;
+  grid-column: 2/3;
+  grid-row: 3/3;
+  max-width: 100%;
+  border-radius: 10px; 
+  justify-self: center; 
+  /* border: 8px #0147bb solid; */
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+#retzlaff {
+  grid-area: content;
+  grid-column: 4/5;
+  grid-row: 3/3;
+  max-width: 100%;
+  border-radius: 10px; 
+  justify-self: center; 
+  /* border: 8px #0147bb solid; */
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+/* Content Section */
+#content {
+  grid-area: content;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 8px #4169e1 solid;
+  grid-column: 1/2;
+  background-color: white;
+}
+
+#content h4,
+#content h5 {
+  text-align: center;
+  color: #0147bb; /* Primary color */
+}
+
+#content p {
+  margin: 10px 0;
+}
+
+#home-intro {
+  border: 8px #4169e1 solid;
+  grid-column: 2/5;
+  grid-row: 2/2;
+  background-color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #0147bb;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  grid-column: 1/6;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#background {
+  border: white solid 5px;
+}
+
+h3 {
+  color: #0147bb;
+  text-align: center;
+  font-family: Kanit, "Open Sans", sans-serif;
+}
+
+#home-season-info {
+  border: 8px #4169e1 solid;
+  grid-column: 2/5;
+  grid-row: 4/4;
+  background-color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
