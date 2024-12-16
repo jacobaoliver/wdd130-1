@@ -14,36 +14,30 @@ body {
   padding: 0;
   font-family: Roboto, "Open Sans", sans-serif;
   color: black;
-
   display: grid;
   grid-template-columns: 1fr 1fr 100px 1fr 10px;
-  grid-template-rows: 80px auto auto auto 70px; 
-  grid-template-areas:
-    "nav nav nav"
-    ". image ."
-    "content content content"
-    "content content content"
-    "footer footer footer";
-  gap: 20px; 
+  grid-template-rows: 80px 1fr 1fr 1fr 70px;
+  gap: 20px;
+  background-image: url("../images/blue-background.jpg");
+  max-height: fit-content;
 }
 
-/* Navigation */
 nav {
-  grid-area: nav;
   background-color: #0147bb; /* Primary color */
   padding: 10px;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   grid-column: 1/6;
+  grid-row: 1/2;
   font-family: Kanit, "Open Sans", sans-serif;
   border-bottom: black 5px solid;
 }
 
 nav .nav-links {
   display: flex;
-  gap: 100px; 
-  justify-content: center; 
+  gap: 100px;
+  justify-content: center;
 }
 
 nav a {
@@ -58,75 +52,68 @@ nav a:hover {
 }
 
 #jacob {
-  grid-column: 1/1;
-  grid-row: 2/2;
-  color: black;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  color: white;
   font-family: Satisfy;
   margin: 0 auto;
   margin-top: 170px;
-  background-color: white;
   /* border: 8px #0147bb solid; */
   padding: 4px;
 }
 
 #gallery {
-    grid-column: 3/4;
-    grid-row: 3/3;
-    color: black;
-    font-family: Satisfy;
-    font-size: 1.5em;
-    background-color: white;
-    /* border: 8px #0147bb solid; */
-    padding: 4px;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-right: 10px;
-    max-height: 35px;
-    border: 8px #4169e1 solid;
-  }
+  grid-column: 3/4;
+  grid-row: 3/4;
+  color: black;
+  font-family: Satisfy;
+  font-size: 1.5em;
+  background-color: white;
+  /* border: 8px #0147bb solid; */
+  padding: 4px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-right: 10px;
+  max-height: 35px;
+  border: 8px #4169e1 solid;
+}
 
-
-/* Images */
 
 #home-logo {
-  grid-area: content;
-  grid-column: 1/1;
-  grid-row: 2/2;
+  grid-column: 1/2;
+  grid-row: 2/3;
   max-width: 100%;
-  border-radius: 10px; 
-  justify-self: center; 
+  border-radius: 10px;
+  justify-self: center;
   /* border: 8px #0147bb solid; */
   margin-top: 15px;
   margin-left: 5px;
 }
 
 #team-pic {
-  grid-area: content;
   grid-column: 2/3;
-  grid-row: 3/3;
+  grid-row: 3/4;
   max-width: 100%;
-  border-radius: 10px; 
-  justify-self: center; 
+  border-radius: 10px;
+  justify-self: center;
   /* border: 8px #0147bb solid; */
   margin-top: 10px;
   margin-left: 60px;
 }
 
 #retzlaff {
-  grid-area: content;
   grid-column: 4/5;
-  grid-row: 3/3;
+  grid-row: 3/4;
   max-width: 100%;
-  border-radius: 10px; 
-  justify-self: center; 
+  border-radius: 10px;
+  justify-self: center;
   /* border: 8px #0147bb solid; */
   margin-top: 10px;
   margin-right: 50px;
 }
 
 /* Content Section */
-#content {
-  grid-area: content;
+body .home-season {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -135,23 +122,24 @@ nav a:hover {
   margin: 0 auto;
   border: 8px #4169e1 solid;
   grid-column: 1/2;
+  grid-row: 3/5;
   background-color: white;
 }
 
-#content h4,
-#content h5 {
+body .home-season h4,
+body .home-season h5 {
   text-align: center;
   color: #0147bb; /* Primary color */
 }
 
-#content p {
+body .home-season p {
   margin: 10px 0;
 }
 
-#home-intro {
+body .home-intro {
   border: 8px #4169e1 solid;
-  grid-column: 2/5;
-  grid-row: 2/2;
+  grid-column: 2/4;
+  grid-row: 2/3;
   background-color: white;
   text-align: center;
   padding-left: 20px;
@@ -159,14 +147,23 @@ nav a:hover {
   padding-bottom: 10px;
 }
 
-/* Footer */
+body .home-season-info {
+  border: 8px #4169e1 solid;
+  grid-column: 2/5;
+  grid-row: 4/5;
+  background-color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 footer {
-  grid-area: footer;
   background-color: #0147bb;
   color: white;
   padding: 10px;
   text-align: center;
   grid-column: 1/6;
+  grid-row: 5/6;
 }
 
 footer a {
@@ -188,12 +185,22 @@ h3 {
   font-family: Kanit, "Open Sans", sans-serif;
 }
 
-#home-season-info {
-  border: 8px #4169e1 solid;
-  grid-column: 2/5;
-  grid-row: 4/4;
-  background-color: white;
+body .players-intro {
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  grid-column: 1/3;
+  /* grid-row: 2/3; */
+  margin-left: 20px;
+  background-color: white;
+  border: 8px #4169e1 solid;
+}
+
+body .players {
+  text-align: center;
+  margin: 0 auto;
+  grid-column: 1/3;
+  /* grid-row: 2/3; */
+  margin-left: 20px;
+  background-color: white;
+  border: 8px #4169e1 solid;
 }
