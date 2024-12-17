@@ -213,7 +213,7 @@ h3 {
   font-family: Kanit, "Open Sans", sans-serif;
 }
 
-.player-main{
+.player-main {
   display: grid;
   grid-template-rows: 1fr 1fr 5fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -253,31 +253,62 @@ h3 {
 
 .season-main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 
 .season-intro {
   background-color: white;
   border: 8px #4169e1 solid;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   padding-top: 10px;
   text-align: center;
   grid-row: 2/3;
-  grid-column: 2/3;
+  grid-column: 1/2;
   border-radius: 10px;
+  margin-left: 60px;
+}
+
+.natty h4 {
+  color: #0147bb;
+  font-family: Kanit, "Open Sans", sans-serif;
 }
 
 .natty {
   background-color: white;
   border: 8px #4169e1 solid;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   padding-top: 10px;
   text-align: center;
-  grid-row: 4/5;
-  grid-column: 2/3;
+  grid-row: 2/3;
+  grid-column: 3/4;
   border-radius: 10px;
+  margin-right: 60px;
+}
+
+.natty-pic {
+  margin-left: 60px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.natty-pic p {
+  padding: 2px;
+  background-color: white;
+  border: 4px #4169e1 solid;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 57px;
+  margin-top: 15px;
+}
+
+.natty-pic a {
+  text-decoration: none;
+}
+
+.natty-pic a:hover {
+  background-color: #4169e1;
 }
 
 .seasons-grid {
@@ -298,6 +329,10 @@ h3 {
   text-decoration: none;
 }
 
-.seasons-grid p:hover{
+.seasons-grid a {
+  text-decoration: none;
+}
+
+.seasons-grid a:hover {
   background-color: #4169e1;
 }
