@@ -102,8 +102,9 @@ nav a:hover {
   border-radius: 10px;
   justify-self: center;
   /* border: 8px #0147bb solid; */
-  margin-top: 10px;
-  margin-left: 40px;
+  margin-top: 0px;
+  margin-left: 60px;
+  margin-bottom: 40px;
 }
 
 #retzlaff {
@@ -113,14 +114,15 @@ nav a:hover {
   border-radius: 10px;
   justify-self: center;
   /* border: 8px #0147bb solid; */
-  margin-top: 10px;
+  margin-top: 0px;
   margin-right: 70px;
+  margin-bottom: 40px;
 }
 
 .home-middle {
   display: flex;
-  margin-bottom: 50px;
-  margin-right: 150px;
+  margin-bottom: 0px;
+  margin-right: 140px;
 }
 
 .home-logo-div {
@@ -140,7 +142,7 @@ nav a:hover {
   grid-column: 1/2;
   grid-row: 3/5;
   background-color: white;
-  margin-left: 70px;
+  margin-left: 80px;
   border-radius: 10px;
 }
 
@@ -183,6 +185,7 @@ nav a:hover {
   margin-bottom: 20px;
   margin-right: 70px;
   border-radius: 10px;
+  margin-top: 0px;
 }
 
 footer {
